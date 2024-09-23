@@ -1,0 +1,94 @@
+.wrapper {
+    display: grid;
+    place-content: center;
+}
+.calculator_container {
+    width: 400px;
+    height: 600px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-areas: 
+        "answer answer answer answer"
+        "clear clear backspace divide"
+        "seven eight nine multiply"
+        "four five six subtract"
+        "one two three plus"
+        "zero zero zero equals";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.answer {
+    grid-area: answer;
+    background-color: black;
+    color: white;
+}
+.clear {
+    grid-area: clear;
+}
+.backspace {
+    grid-area: backspace;
+}
+.divide {
+    grid-area: divide;
+}
+.seven { 
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.multiply {
+    grid-area: multiply;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.subtract {
+    grid-area: subtract;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.plus {
+    grid-area: plus;
+}
+.zero {
+    grid-area: zero;
+}
+.equals {
+    grid-area: equals;
+}
+button {
+    font-size: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.num {
+    background-color: #d8d9db;
+    color: black;
+}
+.num:hover {
+    background-color: #ebebeb;
+}
+.operation {
+    background-color: #df974c;
+    color: white;
+}
+.operation:hover {
+    background-color: #dfb07e;
+}
