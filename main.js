@@ -12,15 +12,15 @@ function getClickValue(event) {
     let input = event.target.innerText;
     switch (input) {
         case "C":   num1 = ""; num2 = ""; operator = ""; answer = ""; onNum1 = true;
-                    display.innerText = null;
+                    reRender("0");
                     break;
         case "←":   if(onNum1){
                         num1 = num1.slice(0, num1.length-1);
-                        display.innerText = num1;
+                        reRender(num1);
                     }
                     else {
                         num2 = num2.slice(0, num2.length-1);
-                        display.innerText = num2;   
+                        reRender(num2);   
                     }
                     break;
         case "+":   if (num1 && num2 && !operator) {
@@ -65,22 +65,22 @@ function getClickValue(event) {
                     break; 
         case "=":   if (num1 && num2 && operator) {
                     answer = calcAnswer(operator, num1, num2)
-                    display.innerText = answer;
+                    reRender(answer);
                     num1=""; num2=""; operator="";
                     }
                     break; 
         default:    if (onNum1) {
                         num1 += input;
-                        display.innerText = num1;
+                        reRender(num1);
                     } else {
                         num2 += input;
-                        display.innerText = num2;
+                        reRender(num2);
                     }
     }
 }
 
 function midCalc(answer) {
-    display.innerText = answer;
+    reRender(answer);
     num1 = answer;
     num2 = "";
     operator = undefined;
@@ -97,4 +97,8 @@ function calcAnswer(operator, num1, num2) {
         default: answer = "can't compute";
     }
     return answer;
+}
+
+function reRender(value) {
+    display.innerText = value;
 }

@@ -21,10 +21,11 @@
     grid-area: display;
     background-color: black;
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     display:grid;
     place-content: center right;
     padding-right: 5px;
+    font-family: Open Sans;
 }
 .clear {
     grid-area: clear;
