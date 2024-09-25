@@ -8,7 +8,7 @@
     border: 2px solid black;
     display: grid;
     grid-template-areas: 
-        "answer answer answer answer"
+        "display display display display"
         "clear clear backspace divide"
         "seven eight nine multiply"
         "four five six subtract"
@@ -17,10 +17,14 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.answer {
-    grid-area: answer;
+.display {
+    grid-area: display;
     background-color: black;
     color: white;
+    font-size: 40px;
+    display:grid;
+    place-content: center right;
+    padding-right: 5px;
 }
 .clear {
     grid-area: clear;
